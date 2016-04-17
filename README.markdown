@@ -1,11 +1,11 @@
 # 感圧センサで離席検出してPCスクリーンロックするBLEデバイス
 
-![写真](../img/chairleave.jpg)
-
 BLEのProximity Profile(PXP)対応デバイスです。
 PXPデバイスを持ち歩くのは面倒なので、椅子側に設置して、
 感圧センサ(や自作マットスイッチ)で離席を検出した時にコネクションを切断するようにしています。
 PC側は、BluetoothスタックのPXP機能をそのまま使ってロックされます。
+
+![写真](../img/chairleave.jpg)
 
 [人感センサによるスクリーンロック回避USBデバイス](https://github.com/deton/avoidscreenlock)
 を作ったのですが、たまにロックされないままになっていることがあるので作成。
@@ -41,8 +41,8 @@ USB BLEをいくつか試したところ、
 Broadcomスタック(I-O DATA USB-BT40LE)のロック機能が使いやすそうでした。
 ロック前に10秒のカウントダウンダイアログが表示されるので、
 姿勢を変えたり座り直す等の対応ができます。
-![カウントダウンダイアログ](../img/countdown.jpg)
-![PXP設定ダイアログ](../img/broadcompxp2.jpg)
+![カウントダウンダイアログ](../img/countdown.png)
+![PXP設定ダイアログ](../img/broadcompxp2.png)
 
 参考: その他試したUSB BLE(PXP動作はPXPタグLBT-PCSCU01で確認):
 + Motorolaスタック(Planex BT-Micro4)ではいきなりロック。
@@ -111,6 +111,7 @@ Baud rate 115200。TeraTermの場合Terminal設定のNew-line ReceiveをAUTOに�
 ![自作マットスイッチ](../img/matswitch.jpg)
 
 作り方:
+
 1. スペーサにするため、クリアファイルを片側だけに切って、
    2穴パンチで直径6mmの穴をたくさん開ける
    (1cm角の穴をカッターでいくつか開けたものだと、座布団の下に置くだけでスイッチオン)。
@@ -146,10 +147,8 @@ Baud rate 115200。TeraTermの場合Terminal設定のNew-line ReceiveをAUTOに�
 	+ [Ubuntuで同様に](http://gihyo.jp/admin/serial/01/ubuntu-recipe/0267)
 + BroadcomのBluetoothスタックには、
   A2DP等で接続している携帯端末が離れた時にロックする機能あり
-+ [BtProx: Bluetooth Proximity Lock Utility](btprox.sourceforge.net)
++ [BtProx: Bluetooth Proximity Lock Utility](http://btprox.sourceforge.net/)
 + [PeopleLogOn スマホのWi-Fi電波などを利用して離席時にパソコンをオートロックする、手軽なセキュリティ対策ソフト](http://www.vector.co.jp/magazine/softnews/150613/n1506131.html)
 + [WinSensorシリーズ（SENSOR-HM/ECO）](http://www.iodata.jp/product/lcd/option/sensor-hmeco/)。人感センサーで離席時に省電力モードに切替
 + Android 5.0はPXPに対応しているが、ホスト側としての対応のみの模様(F-04Gで試した感じでは)。
 + [自作マットスイッチで犬が話すドッグトーキングマシン製作例](http://www.mycomkits.com/hpgen/HPB/entries/27.html)
-
-+ [人感センサによるスクリーンロック回避USBデバイス](https://github.com/deton/avoidscreenlock)
