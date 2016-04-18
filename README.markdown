@@ -132,11 +132,13 @@ Baud rate 115200。TeraTermの場合Terminal設定のNew-line ReceiveをAUTOに�
 * [フォトリフレクタで座布団にかかる圧力を計測](http://yutasugiura.com/research/yurufuwa/yurufuwa.html#fuwafuwa): センサ1個だけだと検出が難しそうな感じ
 
 ## 課題
+* 現状のデバイスは1台のPCとしかペアリングできないので、複数台PCがある場合、PC台数分のデバイスが必要になる。
 * 自作マットスイッチの上に置く座布団の位置によって、離席してもオンになったままになる場合あり。
   逆に、座る位置や姿勢によってたまにオフになる場合あり。
   座布団の上に置けばほぼ問題なし。
   自作マットスイッチのスペーサの穴の大きさ・形・配置・数はさらなる調整が必要そう。
 * 休止状態からの復帰後、しばらくするとPC側がずっと接続したままとみなすようになる場合あり。
+  休止状態を使わないことにして回避。
 
 ## 関連
 + BluetoothデバイスがPCから離れた時に自動ロック。
@@ -146,7 +148,7 @@ Baud rate 115200。TeraTermの場合Terminal設定のNew-line ReceiveをAUTOに�
 	+ [ぶるタグ](http://pc.nikkeibp.co.jp/article/column/20120912/1062902/?P=2)
 	+ [Ubuntuで同様に](http://gihyo.jp/admin/serial/01/ubuntu-recipe/0267)
 + BroadcomのBluetoothスタックには、
-  A2DP等で接続している携帯端末が離れた時にロックする機能あり
+  SPP/HFP/A2DPで接続している携帯端末が離れた時にロックする機能あり
 + [BtProx: Bluetooth Proximity Lock Utility](http://btprox.sourceforge.net/)
 + [PeopleLogOn スマホのWi-Fi電波などを利用して離席時にパソコンをオートロックする、手軽なセキュリティ対策ソフト](http://www.vector.co.jp/magazine/softnews/150613/n1506131.html)
 + [WinSensorシリーズ（SENSOR-HM/ECO）](http://www.iodata.jp/product/lcd/option/sensor-hmeco/)。人感センサーで離席時に省電力モードに切替
